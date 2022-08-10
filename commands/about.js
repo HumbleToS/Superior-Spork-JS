@@ -10,13 +10,11 @@ module.exports = {
             .setColor(0xffffff)
             .setTitle('Superior Spork')
             .setDescription('This is essentially `Superior Spork#0830` but in JavaScript!')
-            .addFields(
-                { name: 'Developer', value: `${dev.tag}` }
-            )
-            .addFields(
+            .addFields([
+                { name: 'Developer', value: `${dev.tag}` },
                 { name: 'Latency', value: `${interaction.client.ws.ping}ms` }
-            )
-            .setTimestamp(new Date());
+            ])
+            .setTimestamp();
 
         await interaction.reply({ embeds: [aboutEmbed] });
     },
