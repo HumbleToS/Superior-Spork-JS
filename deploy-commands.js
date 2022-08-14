@@ -2,7 +2,8 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { REST } = require('@discordjs/rest');
 const { Routes } = require('discord.js');
-const { client_id, token } = require('./config.json');
+
+const { client_id, token } = require(fs.existsSync('./altconfig.json') ? './altconfig.json' : './config.json');
 
 const commands = [];
 const commandsPath = path.join(__dirname, 'commands');
