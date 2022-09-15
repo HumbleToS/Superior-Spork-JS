@@ -12,7 +12,7 @@ module.exports = {
         const aboutEmbed = new EmbedBuilder()
             .setColor(0xffffff)
             .setTitle('Superior Spork')
-            .setDescription(`This is essentially \`Superior Spork#0830\` but in JavaScript!\nBot was started on <t:${interaction.client.start_time}:f>`)
+            .setDescription(`This is essentially \`Superior Spork#0830\` but in JavaScript!\nBot online since <t:${interaction.client.start_time}:f>`)
             .addFields([
                 { name: 'Developer', value: `${dev.tag}` },
                 { name: 'Bot Latency', value: `Latency: \`${end-start}ms\`\nAPI latency: \`${interaction.client.ws.ping}ms\`` }
