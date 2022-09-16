@@ -15,7 +15,7 @@ const client = new Client({
 });
 
 client.commands = new Collection();
-client.start_time = Math.round(new Date().getTime() / 1000);
+client.startTime = Math.round(new Date().getTime() / 1000);
 
 const commandsPath = path.join(__dirname, 'commands');
 const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
