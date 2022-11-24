@@ -30,32 +30,32 @@ for (const file of commandFiles) {
 client.once('ready', () => {
     console.log("Bot has started");
 
-    client.user.setPresence({ 
-        activities: [{ 
-            name: ` over ${client.guilds.cache.size} servers`, 
-            type: ActivityType.Watching 
-        }], 
-        status: 'dnd' 
+    client.user.setPresence({
+        activities: [{
+            name: ` over ${client.guilds.cache.size} servers`,
+            type: ActivityType.Watching
+        }],
+        status: 'dnd'
     });
 });
 
 client.on("guildCreate", async(guild) => {
-    client.user.setPresence({ 
-        activities: [{ 
-            name: ` over ${client.guilds.cache.size} servers`, 
-            type: ActivityType.Watching 
-        }], 
-        status: 'dnd' 
+    client.user.setPresence({
+        activities: [{
+            name: ` over ${client.guilds.cache.size} servers`,
+            type: ActivityType.Watching
+        }],
+        status: 'dnd'
     });
 });
 
 client.on("guildDelete", async(guild) => {
-    client.user.setPresence({ 
-        activities: [{ 
-            name: ` over ${client.guilds.cache.size} servers`, 
-            type: ActivityType.Watching 
-        }], 
-        status: 'dnd' 
+    client.user.setPresence({
+        activities: [{
+            name: ` over ${client.guilds.cache.size} servers`,
+            type: ActivityType.Watching
+        }],
+        status: 'dnd'
     });
 });
 
